@@ -14,21 +14,19 @@ const LISTS = ["TODO", "IN PROGRESS", "COMPLETED"];
 const PRIORIRY = ["HIGH", "MEDIUM", "NORMAL", "LOW"];
 
 const AddTask = ({ open, setOpen }) => {
-  const task = ""; 
+  const task = "";
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  
+
   const [team, setTeam] = useState(task?.team || []);
   const [stage, setStage] = useState(task?.stage?.toUpperCase() || LISTS[0]);
   const [priority, setPriority] = useState(task?.priority?.toUpperCase() || PRIORIRY[2]);
   const [assets, setAssets] = useState([]);
-  const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
-  const [assignee, setAssignee] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
@@ -114,7 +112,6 @@ const AddTask = ({ open, setOpen }) => {
               </div>
             </div>
 
-            {/* New fields */}
             <Textbox
               placeholder='Description'
               type='text'
@@ -127,19 +124,9 @@ const AddTask = ({ open, setOpen }) => {
 
             <SelectList
               label='Category'
-              lists={['Technical', 'Administrative', 'Other']} // Example categories
+              lists={['Technical', 'Administrative', 'Other']}
               selected={category}
               setSelected={setCategory}
-            />
-
-            <Textbox
-              placeholder='Assignee'
-              type='text'
-              name='assignee'
-              label='Assignee'
-              className='w-full rounded'
-              register={register("assignee", { required: "Assignee is required" })}
-              error={errors.assignee? errors.assignee.message : ""}
             />
 
             <Textbox
