@@ -40,5 +40,5 @@ const tasksData = [
     }
   ];
   
-  export default tasksData;
+  export const user = tasksData[0];
   
