@@ -20,9 +20,9 @@ const Login = () => {
     console.log("submit");
   };
 
-  useEffect(() => {
-    user && navigate("/dashboard");
-  }, [user]);
+  // useEffect(() => {
+  //   user && navigate("/dashboard");
+  // }, [navigate, user]);
 
   return (
     <div className='w-full min-h-screen flex items-center justify-center flex-col lg:flex-row bg-[#f3f4f6]'>
@@ -31,10 +31,9 @@ const Login = () => {
         <div className='h-full w-full lg:w-2/3 flex flex-col items-center justify-center'>
           <div className='w-full md:max-w-lg 2xl:max-w-3xl flex flex-col items-center justify-center gap-5 md:gap-y-10 2xl:-mt-20'>
             <span className='flex gap-1 py-1 px-3 border rounded-full text-sm md:text-base bordergray-300 text-gray-600'>
-              Manage all your task in one place!
-            </span>
+              <b><h1>Manage organisational tasks and send tracking numbers to clients for reference</h1></b>          </span>
             <p className='flex flex-col gap-0 md:gap-4 text-4xl md:text-6xl 2xl:text-7xl font-black text-center text-blue-700'>
-              <span>Cloud-Based</span>
+              <span>Opentech</span>
               <span>Task Manager</span>
             </p>
 
